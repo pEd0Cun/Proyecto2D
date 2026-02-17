@@ -32,6 +32,7 @@ public class Movimiento : MonoBehaviour
 
         if(debeSaltar)
         {
+            //Mejoramiento del Salto
             //rb.velocity = new Vector2(rb.velocity.x, velInicialSalto);
             velInicialSalto = Mathf.Sqrt(-2 * alturaSalto * Physics2D.gravity.y * rb.gravityScale);
             rb.velocity = new Vector2(rb.velocity.x, velInicialSalto);
