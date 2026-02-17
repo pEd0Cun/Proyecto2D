@@ -24,4 +24,9 @@ public class ControlJudador : MonoBehaviour
     {
         entradaControl = context.ReadValue<Vector2>();
     }
+
+    public void AlSaltar(InputAction.CallbackContext context)
+    {
+        movimiento.Saltar(context.action.triggered);
+    }
 }

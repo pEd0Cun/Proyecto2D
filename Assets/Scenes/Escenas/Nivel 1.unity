@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 1641837285}
   - component: {fileID: 1641837290}
   - component: {fileID: 1641837291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jugador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,6 +426,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaminata: 4
+  velInicialSalto: 24
+  capaDeSalto:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1641837286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +531,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 55b22cc5-3065-41a9-9cce-f48a507d522d
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1641837286}
+        m_TargetAssemblyTypeName: ControlJudador, Assembly-CSharp
+        m_MethodName: AlSaltar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5e3e045b-ea48-41b8-bf2c-16110f0c8e46
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -680,7 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1859724954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plataforma prueba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,6 +791,10 @@ PrefabInstance:
     - target: {fileID: 1614269080080066796, guid: 1e1b2fd0e979d35498dcbe05817fff96, type: 3}
       propertyPath: m_Name
       value: Plataforma
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614269080080066796, guid: 1e1b2fd0e979d35498dcbe05817fff96, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7144646813790324839, guid: 1e1b2fd0e979d35498dcbe05817fff96, type: 3}
       propertyPath: m_LocalPosition.x
