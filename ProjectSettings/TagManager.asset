@@ -38,11 +38,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Fondo
     uniqueID: 1801406095
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Plataforma
     uniqueID: 4032035157

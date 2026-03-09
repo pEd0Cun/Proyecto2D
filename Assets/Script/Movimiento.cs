@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class Movimiento : MonoBehaviour
@@ -17,11 +18,14 @@ public class Movimiento : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
 
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         saltosRestantes = cantidadSaltosTotales;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,6 +40,7 @@ public class Movimiento : MonoBehaviour
     public void Moverse(float movimientoX)
     {
         rb.velocity = new Vector2(movimientoX * velocidadCaminata, rb.velocity.y);
+        animator.SetBool("estarParado",movimientoX !=0);
     }
 
     public void Saltar(bool debeSaltar)
