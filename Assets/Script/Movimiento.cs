@@ -42,7 +42,9 @@ public class Movimiento : MonoBehaviour
         rb.velocity = new Vector2(movimientoX * velocidadCaminata, rb.velocity.y);
         animator.SetBool("estarParado",movimientoX !=0);
     }
+        public void VoltearTransform(float movimientoX){        transform.localScale = new Vector2(Mathf.Sign(movimientoX) * Mathf.Abs(transform.localScale.x), transform.localScale.y);
 
+    }
     public void Saltar(bool debeSaltar)
     {
         if (!debeSaltar) return;
