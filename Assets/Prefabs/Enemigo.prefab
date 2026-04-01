@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3915820549288073572}
   - component: {fileID: 6764433648982094515}
   - component: {fileID: 78856080664935671}
+  - component: {fileID: 8653639991429875018}
+  - component: {fileID: 4203403110375109413}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Untagged
@@ -31,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 1910146945582669388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.67, y: 1.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.6457, y: 1.677, z: 0}
+  m_LocalScale: {x: 1.0487, y: 1.0139, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6008673342416124827}
@@ -170,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.003315568, y: -0.16117522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -181,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5822525, y: 0.67764956}
   m_EdgeRadius: 0
 --- !u!114 &6764433648982094515
 MonoBehaviour:
@@ -218,6 +220,32 @@ MonoBehaviour:
   layerSuelo:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &8653639991429875018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910146945582669388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccce297227e694542934eba14e1ef622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipo: 2
+--- !u!114 &4203403110375109413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910146945582669388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa8dac14418576498e4b4385681b0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantAtaque: 1
 --- !u!1 &2848195435000000385
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 2848195435000000385}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -0.26, z: 0}
+  m_LocalPosition: {x: 0.549, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
