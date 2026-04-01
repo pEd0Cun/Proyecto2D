@@ -8,11 +8,13 @@ public class ControlJudador : MonoBehaviour
 
 {
     private Movimiento movimiento;
+    private LanzaProyectiles lanzaProyectiles;
     private Vector2 entradaControl;
     // Start is called before the first frame update
     void Start()
     {
         movimiento = GetComponent<Movimiento>();
+        lanzaProyectiles = GetComponent<LanzaProyectiles>();
     }
 
     // Update is called once per frame
@@ -33,4 +35,10 @@ public class ControlJudador : MonoBehaviour
     {
         movimiento.Saltar(context.action.triggered);
     }
+    public void AlLanzar(InputAction.CallbackContext context)
+	{
+    	if (!context.action.triggered) { return; }
+    	lanzaProyectiles.Lanzar();
+	}
+
 }
