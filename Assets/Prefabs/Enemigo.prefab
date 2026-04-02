@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6764433648982094515}
   - component: {fileID: 78856080664935671}
   - component: {fileID: 8653639991429875018}
-  - component: {fileID: 4203403110375109413}
+  - component: {fileID: 1208046162531218017}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Untagged
@@ -198,11 +198,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaminata: 4
+  velocidadEscalar: 3
   alturaSalto: 4
   cantidadSaltosTotales: 2
   capaDeSalto:
     serializedVersion: 2
     m_Bits: 448
+  capaEscalera:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &78856080664935671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipo: 2
---- !u!114 &4203403110375109413
+--- !u!114 &1208046162531218017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
