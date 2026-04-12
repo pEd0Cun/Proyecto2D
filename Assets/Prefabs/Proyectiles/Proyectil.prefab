@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ataque: 1
   velocidad: 5
+  tiempoDeVida: 1

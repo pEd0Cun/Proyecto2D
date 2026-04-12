@@ -6,6 +6,8 @@ public class Proyectil : MonoBehaviour
 {
 	[SerializeField] private float ataque = 1f;
 	[SerializeField] private float velocidad = 5f;
+	
+	public float tiempoDeVida = 3f;
 
 	private Rigidbody2D rb;
 	private EquipoEnum equipoEnum;
@@ -13,6 +15,7 @@ public class Proyectil : MonoBehaviour
 	private void Awake()
 	{
     	rb = GetComponent<Rigidbody2D>();
+		Destroy(gameObject, tiempoDeVida);
 	}
 
 	public void AjustarEquipoEnum(EquipoEnum equipoEnum)
@@ -25,13 +28,27 @@ public class Proyectil : MonoBehaviour
     	rb.velocity = direccion.normalized * velocidad;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-    	if (!other.gameObject.TryGetComponent<Salud>(out Salud saludDelOtro)) { return; }
-    	if (!other.gameObject.TryGetComponent<Equipo>(out Equipo equipoDelOtro)) { return; }
-    	if (equipoDelOtro.EquipoActual == equipoEnum) { return; }
+private void OnTriggerEnter2D(Collider2D other)
+{
+    Debug.Log("Golpe a: " + other.gameObject.name);
 
-    	saludDelOtro.PerderSalud(ataque);
-    	Destroy(gameObject);
-	}
+  
+    if (other.CompareTag("Background")) return;
+
+  
+    if (other.CompareTag("Enemy"))
+    {
+        if (other.TryGetComponent<Salud>(out Salud saludDelOtro) &&
+            other.TryGetComponent<Equipo>(out Equipo equipoDelOtro))
+        {
+            if (equipoDelOtro.EquipoActual != equipoEnum)
+            {
+                saludDelOtro.PerderSalud(ataque);
+            }
+        }
+    }
+
+
+    Destroy(gameObject);
+}
 }

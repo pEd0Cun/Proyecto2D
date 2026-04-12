@@ -77,5 +77,12 @@ public class Salud : MonoBehaviour
         	Destroy(gameObject, tiempoEnDestruirse);
     	}
 	}
+	public void RecuperarSalud(float cantidad)
+	{
+		if (estaMuerto) return;
+ 
+		saludActual = Mathf.Min(saludActual + cantidad, saludMax);
+		alActualizarSalud?.Invoke();
+	}
 }
 
