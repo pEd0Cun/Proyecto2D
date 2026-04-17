@@ -5,16 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    public void Start()
-    {
-        
-    }
+    [SerializeField] int nivelACargar = 1;
 
-    // Update is called once per frame
-    void update()
+    public void IniciarJuego()
     {
-        
+        SceneManager.LoadScene(nivelACargar);
+
+    }public void CerrarAplicacion()
+    {
+        Application.Quit();
+
     }
 }
